@@ -16,4 +16,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: 'github-check'
           tool_name: 'reviewdog'
-          checkstyle_config: '.github/chekstyle-config.txt'
+          checkstyle_config: '.github/checkstyle-config.txt'
