@@ -1,10 +1,6 @@
 name: Java Linter
 
-on:
-  pull_request:
-    paths:
-      - 'android/**'
-      - 'tools/**'
+on: pull_request
 
 jobs:
   checkstyle_job:
