@@ -15,7 +15,7 @@ public class MQTT_Publisher {
         String clientId     = "MQTT-publisher";
         MemoryPersistence persistence = new MemoryPersistence();
 
-        try{//Generate MQTT client
+        try {//Generate MQTT client
             MqttClient sampleClient = new MqttClient(broker, clientId, persistence);
             MqttConnectOptions connOpts = new MqttConnectOptions();
             connOpts.setCleanSession(true);
@@ -38,11 +38,11 @@ public class MQTT_Publisher {
 
             //Exit program
             System.exit(0);
-        }catch (MqttException me){
+        } catch (MqttException me) {
             //Standard error printing
-        System.out.println("reason " + me.getReasonCode());
-         System.out.println("msg " + me.getMessage());
-           System.out.println("loc " + me.getLocalizedMessage());
+            System.out.println("reason " + me.getReasonCode());
+            System.out.println("msg " + me.getMessage());
+            System.out.println("loc " + me.getLocalizedMessage());
             System.out.println("cause " + me.getCause());
              System.out.println("excep " + me);
               me.printStackTrace();

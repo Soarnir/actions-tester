@@ -14,6 +14,6 @@ jobs:
         uses: nikitasavinov/checkstyle-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: 'github-check'
+          reporter: 'github-pr-check'
           tool_name: 'reviewdog'
-          
+          checkstyle_config: '.github/checkstyle-config.txt'
