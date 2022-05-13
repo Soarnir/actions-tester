@@ -23,6 +23,7 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MEGALINTER_CONFIG: .mega-linter.yml
 
       # Upload MegaLinter artifacts
       - name: Archive production artifacts
