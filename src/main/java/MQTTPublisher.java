@@ -8,7 +8,7 @@ public class MQTTPublisher {
 
     public static void main(String[] args) {
 
-        String topic        = "/smartcar/control/throttle";
+        String t0pIc        = "/smartcar/control/throttle";
         String content      = "0";
         int qos             = 2;
         String broker       = "tcp://localhost:1883";
@@ -30,7 +30,7 @@ public class MQTTPublisher {
             System.out.println("Publishing message: " + content);
             MqttMessage message = new MqttMessage(content.getBytes());
             message.setQos(qos);
-            sampleClient.publish(topic, message);
+            sampleClient.publish(t0pIc, message);
             System.out.println("Message published");
 
             //Disconnect client
