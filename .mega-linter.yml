@@ -15,7 +15,7 @@ ENABLE_LINTERS:
 PRINT_ALL_FILES: false
 JAVA_CHECKSTYLE_FILE_EXTENSIONS:
   - ".java"
-JAVA_CHECKSTYLE_FILE_NAME: checkstyle-config.xml
+JAVA_CHECKSTYLE_FILE_NAME: "checkstyle-config.xml"
 FILTER_REGEX_EXCLUDE: '(\.automation/test|\.automation/generated|\.github/workflows|TEMPLATES)'
 MARKDOWN_FILTER_REGEX_EXCLUDE: '(license\.md)'
 MARKDOWN_MARKDOWN_LINK_CHECK_DISABLE_ERRORS: true
