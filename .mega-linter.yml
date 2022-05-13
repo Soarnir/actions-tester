@@ -1,0 +1,34 @@
+# Configuration file for MegaLinter
+# See all available variables at https://megalinter.github.io/configuration/ and in linters documentation
+
+APPLY_FIXES: none # When active, APPLY_FIXES must also be defined as environment variable (in github/workflows/mega-linter.yml or other CI tool)
+# ENABLE: # If you use ENABLE variable, all other languages/formats/tooling formats will be disabled by default
+# ENABLE_LINTERS: # If you use ENABLE_LINTERS variable, all other linters will be disabled by default
+DISABLE:
+  - COPYPASTE # Uncomment to disable checks of excessive copy-pastes
+  - CSS
+  - EDITORCONFIG
+  # - SPELL # Uncomment to disable checks of spelling mistakes
+  - JAVASCRIPT
+ENABLE_LINTERS:
+  - JAVA_CHECKSTYLE
+PRINT_ALL_FILES: false
+JAVA_CHECKSTYLE_FILE_EXTENSIONS:
+  - ".java"
+JAVA_CHECKSTYLE_FILE_NAME: checkstyle-config.xml
+FILTER_REGEX_EXCLUDE: '(\.automation/test|\.automation/generated|\.github/workflows|TEMPLATES)'
+MARKDOWN_FILTER_REGEX_EXCLUDE: '(license\.md)'
+MARKDOWN_MARKDOWN_LINK_CHECK_DISABLE_ERRORS: true
+SPELL_MISSPELL_FILTER_REGEX_EXCLUDE: '(\.automation/generated|docs/descriptors)'
+SHOW_ELAPSED_TIME: true
+FILEIO_REPORTER: true
+JSON_REPORTER: true
+GITHUB_STATUS_REPORTER: false
+PLUGINS:
+  - https://raw.githubusercontent.com/megalinter/megalinter/main/.automation/test/mega-linter-plugin-test/test.megalinter-descriptor.yml
+PRE_COMMANDS:
+  - command: echo "This is MegaLinter PRE_COMMAND on own MegaLinter ! :)"
+    cwd: "root"
+POST_COMMANDS:
+  - command: echo "This is MegaLinter POST_COMMAND on own MegaLinter ! :)"
+    cwd: "workspace"
