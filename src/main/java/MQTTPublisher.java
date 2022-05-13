@@ -17,9 +17,9 @@ public class MQTTPublisher {
 
         try {
             //Generate MQTT client
-            MqttClient sampleClient = new MqttClient(broker, clientId, persistence);
-            MqttConnectOptions connOpts = new MqttConnectOptions();
-            connOpts.setCleanSession(true);
+             MqttClient sampleClient = new MqttClient(broker, clientId, persistence);
+       MqttConnectOptions connOpts = new MqttConnectOptions();
+          connOpts.setCleanSession(true);
 
             //Attempt connection
             System.out.println("Connecting to broker: " + broker);
