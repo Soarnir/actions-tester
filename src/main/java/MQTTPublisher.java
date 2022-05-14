@@ -4,8 +4,14 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
+/**
+ * Main class
+ */
 public class MQTTPublisher {
 
+    /**
+     * Initialise everything
+     */
     public static void main(String[] args) {
 
         String t0pIc        = "/smartcar/control/throttle";
