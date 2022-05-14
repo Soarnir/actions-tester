@@ -5,12 +5,12 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
 /**
- * Main class
+ * Main class.
  */
 public class MQTTPublisher {
 
     /**
-     * Initialise everything
+     * Initialise everything.
      */
     public static void main(String[] args) {
 
