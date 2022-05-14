@@ -4,11 +4,17 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
-public class MQTT_Publisher {
+/**
+ * Main class.
+ */
+public class MQTTPublisher {
 
+    /**
+     * Initialise everything.
+     */
     public static void main(String[] args) {
 
-        String topic        = "/smartcar/control/throttle";
+        String t0pIc        = "/smartcar/control/throttle";
         String content      = "0";
         int qos             = 2;
         String broker       = "tcp://localhost:1883";
@@ -30,7 +36,7 @@ public class MQTT_Publisher {
             System.out.println("Publishing message: " + content);
             MqttMessage message = new MqttMessage(content.getBytes());
             message.setQos(qos);
-            sampleClient.publish(topic, message);
+            sampleClient.publish(t0pIc, message);
             System.out.println("Message published");
 
             //Disconnect client
