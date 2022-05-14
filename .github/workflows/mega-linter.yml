@@ -6,9 +6,6 @@ concurrency:
   group: ${{ github.ref }}-${{ github.workflow }}
   cancel-in-progress: true
 
-env:
-  PAT: ${{ secrets.PAT }}
-
 jobs:
   build:
     name: MegaLinter
@@ -26,6 +23,7 @@ jobs:
         env:
           VALIDATE_ALL_CODEBASE: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PAT: ${{ secrets.PAT }}
           MEGALINTER_CONFIG: .mega-linter.yml
 
       # Upload MegaLinter artifacts
